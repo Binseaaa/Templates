@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My App</title>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen">
+        <div class="bg-blue-600 text-white w-64 p-4 flex flex-col space-y-4">
+            <a class="py-2 px-4 bg-blue-700 hover:bg-blue-800 rounded" hx-get="http://localhost:7000/home" hx-trigger="click" hx-swap="innerHTML" hx-target=".result">Home</a>
+            <a class="py-2 px-4 bg-blue-700 hover:bg-blue-800 rounded" hx-get="http://localhost:7000/about" hx-trigger="click" hx-swap="innerHTML" hx-target=".result">About</a>
+            <a class="py-2 px-4 bg-blue-700 hover:bg-blue-800 rounded" hx-get="http://localhost:7000/products" hx-trigger="click" hx-swap="innerHTML" hx-target=".result">Products</a>
+            <a class="py-2 px-4 bg-blue-700 hover:bg-blue-800 rounded" hx-get="http://localhost:7000/contact" hx-trigger="click" hx-swap="innerHTML" hx-target=".result">Contact</a>
+        </div>
+        <div class="result flex-1 p-4 bg-white shadow-md rounded"></div>
+    </div>
+</body>
+</html>
